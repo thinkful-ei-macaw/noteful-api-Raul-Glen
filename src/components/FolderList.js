@@ -1,12 +1,22 @@
 import React from 'react';
 import FolderItem from './FolderItem';
+import { folders } from '../initialState';
 
-export default function FolderList({ folders }) {
-  return (
-    <div>
-      {folders.map(folder => (
-        <FolderItem key={folder.id} folder={folder} id={folder.id} />
-      ))}
-    </div>
-  );
+class FolderList extends React.Component {
+
+  render() {
+
+    return (
+      <div>
+        {folders.map(folder => (
+          <FolderItem key={folder.id} folder={folder} id={folder.id} />
+        ))}
+      </div>
+    );
+
+  }
+
 }
+
+export default FolderList;
+

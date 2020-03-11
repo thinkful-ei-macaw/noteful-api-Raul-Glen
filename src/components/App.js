@@ -7,13 +7,13 @@ import Main from './Main';
 export default class App extends Component {
   state = { folders, notes };
 
-  myFilter(arrOne, arrTwo) {
-    return arrOne.map(folder => {
-      return arrTwo.filter(note => {
-        return folder.id === note.folderId
-      })
-    })
-  }
+  // myFilter(arrOne, arrTwo) {
+  //   return arrOne.map(folder => {
+  //     return arrTwo.filter(note => {
+  //       return folder.id === note.folderId
+  //     })
+  //   })
+  // }
 
   // myFilter(folders, notes)
 

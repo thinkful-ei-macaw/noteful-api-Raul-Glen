@@ -4,10 +4,17 @@ import NoteItem from './NoteItem';
 
 
 
-export default function NoteList({ notes }) {
-  return (
-    <div>
-      {notes && notes.map(note => <NoteItem key={note.id} note={note} />)}
-    </div>
-  );
+class NoteList extends React.Component {
+  render() {
+
+    return (
+      <div>
+        {this.props.notes.map(note => <NoteItem key={note.id} note={note} name={note.name} modified={note.modified} />)}
+      </div>
+    );
+
+  }
+
 }
+
+export default NoteList;

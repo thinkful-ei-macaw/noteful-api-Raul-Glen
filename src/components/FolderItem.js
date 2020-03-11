@@ -1,21 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { folders, notes } from '../initialState';
+
 
 
 
 class FolderItem extends React.Component {
-
-
-
-  myFilter(arrOne, arrTwo) {
-    return arrOne.map(folder => {
-      return arrTwo.filter(note => {
-        return folder.id === note.folderId
-      })
-    })
-  }
-
 
   // Make it so when you click on one of the folders it sends you to the different route, make that a link.
   // When you click on that link, can you see the folder id, console log the id from the URL

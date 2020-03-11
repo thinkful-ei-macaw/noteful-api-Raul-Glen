@@ -1,12 +1,22 @@
 import React from 'react';
+import { notes } from '../initialState';
 
-export default function NoteItem({ note }) {
-  return (
-    <div>
+class NoteItem extends React.Component {
+
+
+  render() {
+    console.log(notes)
+    return (
       <div>
-        Name: {note.name}
-        Modified: {note.modified}
+        <div>
+          Name: {this.props.name}
+          Modified: {this.props.modified}
+        </div>
       </div>
-    </div>
-  );
+    );
+
+  }
+
 }
+
+export default NoteItem;

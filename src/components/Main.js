@@ -2,14 +2,20 @@ import React from 'react';
 import NoteList from './NoteList';
 
 
+
 //props.match.params is part of the route component library 
-export default function Main(props) {
-  console.log(props)
+class Main extends React.Component {
 
-  return (
+  render() {
 
-    <div>
-      <NoteList notes={props.notes} />
-    </div>
-  );
+    return (
+
+      <div>
+        <NoteList notes={this.props.notes} />
+      </div>
+    );
+  }
+
 }
+
+export default Main;
