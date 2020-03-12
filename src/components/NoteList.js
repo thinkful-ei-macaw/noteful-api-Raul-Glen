@@ -11,7 +11,7 @@ class NoteList extends React.Component {
 
     return (
       <div>
-        {this.context.notes.map(note => <NoteItem key={note.id} note={note} name={note.name} modified={note.modified} />)}
+        {this.props.notes.map(note => <NoteItem key={note.id} id={note.id} name={note.name} modified={note.modified} />)}
       </div>
     );
 
