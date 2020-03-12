@@ -4,8 +4,10 @@ import Header from '../components/Header';
 import App from '../components/App';
 import Main from '../components/Main';
 import { folders, notes } from '../initialState';
+import ContextData from '../components/ContexData';
 
 class AppRouter extends React.Component {
+
 
   state = {
 
@@ -13,6 +15,7 @@ class AppRouter extends React.Component {
     folders: folders
 
   }
+
 
   render() {
 

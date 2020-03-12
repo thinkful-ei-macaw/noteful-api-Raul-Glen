@@ -1,14 +1,15 @@
 import React from 'react';
 import FolderItem from './FolderItem';
-import { folders } from '../initialState';
+import ContextData from './ContexData';
 
 class FolderList extends React.Component {
-
+  static contextType = ContextData;
   render() {
+
 
     return (
       <div>
-        {folders.map(folder => (
+        {this.context.folders.map(folder => (
           <FolderItem key={folder.id} folder={folder} id={folder.id} />
         ))}
       </div>

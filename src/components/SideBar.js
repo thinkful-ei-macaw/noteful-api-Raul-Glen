@@ -1,14 +1,15 @@
 import React from 'react';
 import FolderList from './FolderList';
-import { folders } from '../initialState';
+import ContextData from './ContexData';
 
 class SideBar extends React.Component {
+  static contextType = ContextData;
 
   render() {
     return (
       <div>
         <h1>SideBar</h1>
-        {folders && <FolderList folders={folders} />}
+        {this.context.folders.length && <FolderList />}
       </div>
     );
 
